@@ -1,0 +1,108 @@
+.about_container {
+  padding: 60px 10%;
+  min-height: 100vh;
+
+  margin: auto;
+  background-color: #050505;
+}
+
+.title {
+  color: #a6a4a4;
+  display: flex;
+
+  justify-content: center;
+  margin: 50px auto;
+  gap: 10px;
+}
+.about_title {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 90px;
+}
+
+.about_content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.txt_about {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* --- ESTILO DOS CARDS (VIDRO) --- */
+.cards_stack {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card_glass {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card_glass:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.card_icon {
+  width: 130px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon_blue {
+  color: #00bfff;
+  border: 1px solid #00bfff;
+}
+.icon_purple {
+  color: #a020f0;
+  border: 1px solid #a020f0;
+}
+.icon_green {
+  color: #32cd32;
+  border: 1px solid #32cd32;
+}
+
+.card_info {
+  background: rgba(255, 255, 255, 0);
+}
+.card_info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0);
+}
+
+.card_info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0);
+  color: #888;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .about_content {
+    flex-direction: column;
+  }
+}

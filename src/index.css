@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+:root {
+  --bg-color: #383b42;
+  --txt: #fff;
+  --txt-gray: #949090;
+  --txt-gradient: ;
+}
+
+.txt-gradient {
+  /* Cores: Roxo, Azul e Rosa */
+  background: linear-gradient(120deg, #8a2be2, #64a4d2, #ff69b4, #8a2be2);
+
+  /* Fazemos o fundo ser maior que o texto para podermos "movimentá-lo" */
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Chama a animação: 3 segundos, infinita e linear */
+  animation: gradient-animation 9s linear infinite;
+}
+
+/* Regra que move o fundo */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 300% center;
+  }
+}

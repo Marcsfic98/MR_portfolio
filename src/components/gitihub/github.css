@@ -1,0 +1,106 @@
+.github-stats-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: row; /* Força a disposição em linha */
+  justify-content: center;
+  align-items: stretch; /* Garante que todos tenham a mesma altura */
+  gap: 20px;
+  max-width: 1200px; /* Aumentado para caber os 3 na linha */
+  width: 100%;
+}
+
+.stat-card.glass {
+  flex: 1; /* Faz com que cada box ocupe o mesmo espaço proporcional */
+  min-width: 250px; /* Largura mínima para não esmagar o conteúdo */
+  max-width: 350px; /* Largura máxima para não esticar demais */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ajuste para telas pequenas (Mobile) */
+@media (max-width: 900px) {
+  .stats-container {
+    flex-direction: column; /* Empilha em celulares para não quebrar o layout */
+    align-items: center;
+  }
+
+  .stat-card.glass {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.github-stats-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: row; /* Força a disposição em linha */
+  justify-content: center;
+  align-items: stretch; /* Garante que todos tenham a mesma altura */
+  gap: 20px;
+  max-width: 1200px; /* Aumentado para caber os 3 na linha */
+  width: 100%;
+}
+
+.stat-card.glass {
+  flex: 1; /* Faz com que cada box ocupe o mesmo espaço proporcional */
+  min-width: 250px; /* Largura mínima para não esmagar o conteúdo */
+  max-width: 350px; /* Largura máxima para não esticar demais */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Ajuste para telas pequenas (Mobile) */
+@media (max-width: 900px) {
+  .stats-container {
+    flex-direction: column; /* Empilha em celulares para não quebrar o layout */
+    align-items: center;
+  }
+
+  .stat-card.glass {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.stat-label {
+  color: rgb(113, 113, 113);
+}
+
+.stat-value {
+  color: aliceblue;
+  font-size: 22px;
+}
+
+.stat-icon {
+  color: #fff;
+  font-size: 25px;
+}

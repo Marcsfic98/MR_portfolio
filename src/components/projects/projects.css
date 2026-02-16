@@ -1,0 +1,239 @@
+/* --- Reset e Estilos Gerais --- */
+.projects-section {
+  background-color: #050505;
+  color: #ffffff;
+  padding: 100px 20px;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.section-subtitle {
+  color: #666;
+  text-align: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-bottom: 60px;
+  font-weight: 800;
+  background: linear-gradient(180deg, #fff 0%, #444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Filtro --- */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.glass-nav {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 100px;
+}
+
+.glass-btn {
+  background: transparent;
+  border: none;
+  color: #777;
+  padding: 14px 32px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.glass-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* --- Carrossel --- */
+.carousel-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.projects-carousel {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 40px 0;
+  scrollbar-width: none;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Card Base (Maior) --- */
+.project-card {
+  flex: 0 0 500px; /* Largura da box aumentada */
+  scroll-snap-align: center;
+  background: #0f0f0f;
+  border: 1px solid #222;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+  border-color: #444;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 37%;
+  overflow: hidden;
+  border-radius: 32px 32px 0 0;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+/* --- Ajustes Específicos para Mobile --- */
+.mobile-card .image-wrapper {
+  padding-top: 20px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+}
+
+.mobile-card .project-image {
+  width: 240px; /* Largura de celular */
+  height: 500px;
+  aspect-ratio: 9 / 19; /* Proporção de tela de smartphone */
+  border-radius: 30px;
+  border: 6px solid #222;
+  object-fit: cover;
+}
+
+/* --- Conteúdo do Card --- */
+.project-content {
+  padding: 35px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.project-desc {
+  color: #aaa;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  min-height: 120px;
+}
+
+.tags-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tag-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  color: #ccc;
+  font-size: 0.8rem;
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+
+/* --- Botões --- */
+.card-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-glass {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-glass:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* --- Setas de Navegação --- */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.nav-arrow:hover {
+  background: #fff;
+  color: #000;
+}
+.prev {
+  left: -80px;
+}
+.next {
+  right: -80px;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1400px) {
+  .nav-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 0 0 85vw;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+}

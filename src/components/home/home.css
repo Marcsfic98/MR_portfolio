@@ -1,0 +1,173 @@
+.container {
+  padding: 4rem;
+  background-color: #050505;
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 60vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h1 {
+  color: var(--txt);
+  font-size: 2.8rem;
+}
+
+.content h3 {
+  color: var(--txt);
+}
+
+.content p {
+  color: var(--txt-gray);
+  text-align: center;
+}
+
+.buttons_container {
+  display: flex;
+  gap: 25px;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: #fff;
+}
+
+.buttons_container .btn {
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  color: #fff;
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.buttons_container .btn_bg {
+  background: rgba(255, 255, 255, 0);
+}
+
+.btn:hover {
+  /* 1. Aumenta levemente o tamanho */
+  transform: scale(1.05) translateY(-10px);
+
+  /* 2. Aumenta a opacidade do fundo e o brilho da borda */
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* 3. Intensifica o desfoque e a sombra para dar profundidade */
+  backdrop-filter: blur(25px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+}
+
+.btn_project {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  display: inline-block;
+  transition: all 0.4s ease;
+  position: relative;
+
+  /* --- EFEITO VIDRO PADRÃO --- */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Borda padrão (sutil) */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  /* --- TEXTO GRADIENTE ANIMADO (PADRÃO) --- */
+  background-image: linear-gradient(90deg, #8a2be2, #ff8c00, #8a2be2);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: moveGradient 2s linear infinite;
+}
+
+.menu_container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_project:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.15); /* Leve brilho no fundo */
+
+  /* --- BORDA COM GRADIENTE NO HOVER --- */
+  /* Usamos border-image para aplicar o gradiente na borda */
+
+  /* Nota: border-image às vezes cancela o border-radius em alguns browsers. 
+     Se isso acontecer, a alternativa é usar 'border-color' com uma das cores. */
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+  border-radius: 12px;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Ajuste no container para os botões ficarem lado a lado */
+.menu_container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 20px;
+}
+
+/* Estilo do Botão Baixar CV */
+.btn_cv {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  display: inline-block;
+  transition: all 0.4s ease;
+
+  /* Efeito de Vidro mais sóbrio */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.btn_cv:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ff8c00; /* Cor de destaque no hover (laranja do seu gradiente) */
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.2);
+}
+
+/* Ajuste de responsividade básico */
+@media (max-width: 480px) {
+  .menu_container {
+    flex-direction: column; /* Botões empilhados no celular */
+    align-items: center;
+  }
+}

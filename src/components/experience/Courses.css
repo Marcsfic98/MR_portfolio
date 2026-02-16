@@ -1,0 +1,255 @@
+/* --- Seção de Cursos --- */
+.courses-section {
+  background-color: #050505; /* Fundo preto profundo */
+  color: #ffffff;
+  padding: 80px 20px;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.section-subtitle {
+  color: #666;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* --- Filtros (Tabs) --- */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.glass-nav {
+  display: flex;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.glass-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  padding: 12px 28px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.glass-btn:hover {
+  color: #fff;
+}
+
+.glass-btn.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* --- Container do Carrossel --- */
+.carousel-container {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.courses-carousel {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 20px 10px;
+  scrollbar-width: none;
+}
+
+.courses-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Card de Curso (O Segredo do Alinhamento) --- */
+.course-card {
+  flex: 0 0 360px;
+  scroll-snap-align: start;
+  background-color: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Organiza Imagem e Conteúdo verticalmente */
+  min-height: 580px; /* Garante que todos os cards tenham o mesmo tamanho */
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.course-card:hover {
+  border-color: #333;
+  transform: translateY(-8px);
+}
+
+/* --- Imagem e Badge de Data --- */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.course-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.course-date {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Conteúdo Interno --- */
+.course-content {
+  padding: 24px;
+  flex-grow: 1; /* Ocupa o espaço restante */
+  display: flex;
+  flex-direction: column; /* Empilha textos e botão */
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.institution-tag {
+  color: #3b82f6; /* Azul destaque */
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.duration-tag {
+  color: #555;
+  font-size: 0.75rem;
+}
+
+.course-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.course-desc {
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  /* Limita a 3 linhas */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Tags --- */
+.tags-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  /* Espaço reservado para as tags não moverem o botão */
+  min-height: 60px;
+}
+
+.tag-item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #888;
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+/* --- Botão (Alinhado embaixo) --- */
+.card-buttons {
+  margin-top: auto; /* Empurra para o final do card */
+}
+
+.btn-certificate {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-certificate:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* --- Setas de Navegação --- */
+.nav-arrow {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .course-card {
+    flex: 0 0 85vw;
+  }
+  .nav-arrow {
+    display: none;
+  }
+}
+.tag-item {
+  max-height: 26px;
+}

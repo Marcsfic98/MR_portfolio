@@ -1,0 +1,61 @@
+.stacks_container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.title {
+  color: #a6a4a4;
+  display: flex;
+
+  justify-content: center;
+  margin: 50px auto;
+  gap: 10px;
+}
+.box_stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.box_stack h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* No seu stacks.css ou styled-component */
+.react-flow__pane {
+  cursor: default !important;
+}
+
+.react-flow__node {
+  cursor: default !important;
+}
+/* Linha de fundo (o caminho apagado) */
+.base-edge {
+  stroke-opacity: 0.8 !important; /* Quase invisível */
+  stroke-width: 9;
+}
+
+/* O efeito de fluxo de energia */
+.neuron-flow {
+  /* O primeiro número (60) é o tamanho do rastro de luz */
+  /* O segundo (1000) garante que só haja um rastro por linha */
+  stroke-dasharray: 60 1000;
+  stroke-linecap: round;
+  stroke-opacity: 1 !important;
+  animation: flow-animation 6s linear infinite;
+}
+
+/* Brilho neon intenso */
+.neon-glow {
+  filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px var(--edge-color));
+}
+
+@keyframes flow-animation {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
