@@ -3,7 +3,7 @@ import { FaPhone } from "react-icons/fa";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./Contact.css";
+import "./contact.css";
 
 const ContactSection = () => {
   const [result, setResult] = useState("");
