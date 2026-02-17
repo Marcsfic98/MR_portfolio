@@ -1,7 +1,27 @@
 import { useRef, useState } from "react";
 import "./Projects.css";
 
-const projectDatabase = {
+// --- TIPAGEM ---
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  linkRepo: string;
+  linkDemo: string;
+}
+
+interface ProjectDatabase {
+  "Front-end": Project[];
+  Backend: Project[];
+  Mobile: Project[];
+}
+
+// --- DADOS ---
+
+const projectDatabase: ProjectDatabase = {
   "Front-end": [
     {
       id: "f1",
@@ -79,7 +99,7 @@ const projectDatabase = {
       id: "lp1",
       title: "Personal Blog API",
       description:
-        "Este é o projeto de uma API robusta para um Blog Pessoal, desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD (Create, Read, Update, Delete) para postagens e temas, além de um sistema de autenticação de usuários via JWT",
+        "Este é o projeto de uma API robusta para um Blog Pessoal, desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD para postagens e temas, além de um sistema de autenticação via JWT",
       tags: [
         "Typescript",
         "NestJS",
@@ -99,7 +119,7 @@ const projectDatabase = {
       id: "lp2",
       title: "MeLeva API",
       description:
-        "Este é o projeto de uma API robusta para um App de Carona compartilhada, desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD (Create, Read, Update, Delete) para postagens e temas, além de um sistema de autenticação de usuários via JWT",
+        "Este é o projeto de uma API robusta para um App de Carona compartilhada, desenvolvida com o framework NestJS.",
       tags: [
         "Typescript",
         "NestJS",
@@ -122,7 +142,7 @@ const projectDatabase = {
       id: "lp3",
       title: "NutriGo API",
       description:
-        "Este é o projeto de uma API robusta para um Aplicatifo de Delivery fit , desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD (Create, Read, Update, Delete) para postagens e temas, além de um sistema de autenticação de usuários via JWT",
+        "Este é o projeto de uma API robusta para um Aplicativo de Delivery fit, desenvolvida com o framework NestJS.",
       tags: [
         "Typescript",
         "NestJS",
@@ -143,7 +163,7 @@ const projectDatabase = {
       id: "lp4",
       title: "Crud Farmacia",
       description:
-        "Este é o projeto de uma API robusta para um Sistema de Farmacia, desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD (Create, Read, Update, Delete) para postagens e temas, além de um sistema de autenticação de usuários via JWT",
+        "Este é o projeto de uma API robusta para um Sistema de Farmacia, desenvolvida com o framework NestJS.",
       tags: ["Typescript", "NestJS", "TypeORM", "MySQL", "Class validator"],
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFhqJBIBZ-TOdCaGCY9GF_PXT22jtetg-uJQ&s",
@@ -154,7 +174,7 @@ const projectDatabase = {
       id: "lp5",
       title: "savepoint API",
       description:
-        "Este é o projeto de uma API robusta para uma Loja de Games, desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD (Create, Read, Update, Delete) para postagens e temas, além de um sistema de autenticação de usuários via JWT",
+        "Este é o projeto de uma API robusta para uma Loja de Games, desenvolvida com o framework NestJS.",
       tags: ["Typescript", "NestJS", "TypeORM", "MySQL"],
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCgD-g7k7eEWKlKYX1RQlH5O7roNDGmD4MbQ&s",
@@ -177,7 +197,7 @@ const projectDatabase = {
       id: "m2",
       title: "Taxi Drive",
       description:
-        "Aplicativo mobile para Taximetro , com interface moderna e navegação fluida.",
+        "Aplicativo mobile para Taximetro, com interface moderna e navegação fluida.",
       tags: ["React Native", "Expo", "TypeScript"],
       image: "/img/mobile/taxi.gif",
       linkRepo: "https://github.com/Marcsfic98/taxiDriver",
@@ -186,25 +206,28 @@ const projectDatabase = {
   ],
 };
 
-const ProjectsSection = () => {
-  const [activeTab, setActiveTab] = useState("Front-end");
-  const carouselRef = useRef(null);
+// --- COMPONENTE ---
 
-  const scroll = (direction) => {
+const ProjectsSection = () => {
+  const [activeTab, setActiveTab] =
+    useState<keyof ProjectDatabase>("Front-end");
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
       const { scrollLeft, clientWidth } = carouselRef.current;
-      const scrollTo =
+      const scrollToValue =
         direction === "left"
           ? scrollLeft - clientWidth
           : scrollLeft + clientWidth;
-      carouselRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+      carouselRef.current.scrollTo({ left: scrollToValue, behavior: "smooth" });
     }
   };
 
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab as keyof ProjectDatabase);
     if (carouselRef.current) {
-      carouselRef.current.scrollTo({ left: 0, behavior: "instant" });
+      carouselRef.current.scrollTo({ left: 0, behavior: "auto" }); // "instant" foi renomeado para "auto" em versões recentes ou mantido como string
     }
   };
 
@@ -219,15 +242,17 @@ const ProjectsSection = () => {
 
       <div className="filter-container">
         <div className="glass-nav">
-          {Object.keys(projectDatabase).map((tab) => (
-            <button
-              key={tab}
-              className={`glass-btn ${activeTab === tab ? "active" : ""}`}
-              onClick={() => handleTabChange(tab)}
-            >
-              {tab}
-            </button>
-          ))}
+          {(Object.keys(projectDatabase) as Array<keyof ProjectDatabase>).map(
+            (tab) => (
+              <button
+                key={tab}
+                className={`glass-btn ${activeTab === tab ? "active" : ""}`}
+                onClick={() => handleTabChange(tab)}
+              >
+                {tab}
+              </button>
+            )
+          )}
         </div>
       </div>
 
@@ -237,7 +262,7 @@ const ProjectsSection = () => {
         </button>
 
         <div className="projects-carousel" ref={carouselRef}>
-          {projectDatabase[activeTab].map((project) => (
+          {projectDatabase[activeTab].map((project: Project) => (
             <div
               className={`project-card ${
                 activeTab === "Mobile" ? "mobile-card" : ""
@@ -257,7 +282,7 @@ const ProjectsSection = () => {
                 <p className="project-desc">{project.description}</p>
 
                 <div className="tags-box">
-                  {project.tags.map((tag) => (
+                  {project.tags.map((tag: string) => (
                     <span key={tag} className="tag-item">
                       {tag}
                     </span>
