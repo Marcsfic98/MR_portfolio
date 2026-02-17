@@ -19,7 +19,7 @@ const projectDatabase = {
         "Imask",
         "Axios",
       ],
-      image: "/img/frontend/servicosja.png",
+      image: "/img/frontend/servicosja.gif",
       linkRepo: "https://github.com/Marcsfic98/servicosja",
       linkDemo: "https://servicosja-te5n.onrender.com/",
     },
@@ -173,6 +173,16 @@ const projectDatabase = {
       linkRepo: "https://github.com/Marcsfic98/helia.git",
       linkDemo: "https://github.com/Marcsfic98/helia.git",
     },
+    {
+      id: "m2",
+      title: "Taxi Drive",
+      description:
+        "Aplicativo mobile para Taximetro , com interface moderna e navegação fluida.",
+      tags: ["React Native", "Expo", "TypeScript"],
+      image: "/img/mobile/taxi.gif",
+      linkRepo: "https://github.com/Marcsfic98/taxiDriver",
+      linkDemo: "https://github.com/Marcsfic98/taxiDriver",
+    },
   ],
 };
 
@@ -200,8 +210,12 @@ const ProjectsSection = () => {
 
   return (
     <section className="projects-section" id="projects-section">
-      <p className="section-subtitle">Meu Trabalho</p>
-      <h2 className="section-title">Projetos</h2>
+      <p data-aos="zoom-in" className="section-subtitle">
+        Meu Trabalho
+      </p>
+      <h2 data-aos="zoom-in" className="section-title">
+        Projetos
+      </h2>
 
       <div className="filter-container">
         <div className="glass-nav">

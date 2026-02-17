@@ -365,11 +365,11 @@ export const SkillsMindMap = () => {
   return (
     <Container>
       <div style={{ textAlign: "center", padding: "40px 0 20px 0" }}>
-        <h4 className="title">
+        <h4 data-aos="zoom-in" className="title">
           <FaCode />
           Tecnologias
         </h4>
-        <h1 style={{ margin: 0, fontSize: "2.2rem" }}>
+        <h1 data-aos="zoom-in" style={{ margin: 0, fontSize: "2.2rem" }}>
           Skills & <span className="txt-gradient">Ferramentas</span>
         </h1>
         <p style={{ color: "#666" }}>
@@ -392,13 +392,14 @@ export const SkillsMindMap = () => {
           zoomOnDoubleClick={false} // Impede zoom de duplo clique
           preventScrolling={false}
           proOptions={{ hideAttribution: true }}
+          data-aos="zoom-in"
         >
           <Background color="#111" gap={20} />
         </ReactFlow>
       </div>
 
       <div className="stacks_container">
-        <div className="box_stack">
+        <div data-aos="zoom-in" className="box_stack">
           <h4 style={{ color: "#2664eb" }}>Front-end</h4>
           <p>React</p>
           <p>Next.js</p>
@@ -406,7 +407,7 @@ export const SkillsMindMap = () => {
           <p>Styled Components</p>
           <p>Material UI (MUI)</p>
         </div>
-        <div className="box_stack">
+        <div data-aos="zoom-in" className="box_stack">
           <h4 style={{ color: "#9234eb" }}>Back-end</h4>
           <p>Nest</p>
           <p>Node</p>
@@ -415,7 +416,7 @@ export const SkillsMindMap = () => {
           <p>API Rest</p>
           <p>JWT</p>
         </div>
-        <div className="box_stack">
+        <div data-aos="zoom-in" className="box_stack">
           <h4 style={{ color: "#16a34a" }}>Ferramentas</h4>
           <p>Jest</p>
           <p>Git</p>
@@ -425,7 +426,7 @@ export const SkillsMindMap = () => {
           <p>JWT</p>
         </div>
 
-        <div className="box_stack">
+        <div data-aos="zoom-in" className="box_stack">
           <h4 style={{ color: "#db7a0c" }}>Banco de dados</h4>
           <p>MySQL</p>
           <p>PostgreSQL</p>
@@ -433,7 +434,7 @@ export const SkillsMindMap = () => {
           <p>SQLite</p>
         </div>
 
-        <div className="box_stack">
+        <div data-aos="zoom-in" className="box_stack">
           <h4 style={{ color: "#11b0d0" }}>Mobile</h4>
           <p>React Native</p>
           <p>Expo</p>

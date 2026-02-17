@@ -9,11 +9,11 @@ export function About() {
       <h4 className="title">
         <FaRegUser /> Sobre mim
       </h4>
-      <h1 className="about_title">
+      <h1 data-aos="zoom-in" className="about_title">
         Prazer em <span className="txt-gradient">conhecê-lo!</span>
       </h1>
 
-      <div className="about_content">
+      <div data-aos="fade-right" className="about_content">
         {/* LADO ESQUERDO: TEXTO COM NOTAÇÕES */}
         <section className="txt_about">
           <RoughNotationGroup show={true}>
@@ -64,7 +64,7 @@ export function About() {
         </section>
 
         {/* LADO DIREITO: CARDS COM EFEITO VIDRO */}
-        <aside className="cards_stack">
+        <aside data-aos="fade-left" className="cards_stack">
           <div className="card_glass">
             <div className="card_icon icon_blue">{"</>"}</div>
             <div className="card_info">

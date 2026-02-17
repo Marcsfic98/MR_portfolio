@@ -141,6 +141,29 @@ const courseDatabase = {
       image: "/img/cursos/c7.png",
     },
   ],
+  Faculdade: [
+    {
+      id: "f1",
+      title: "Análise e Desenvolvimento de Sistemas (ADS)",
+      institution: "Mauricio de Nassau",
+      duration: "2 anos e meio",
+      date: "2025",
+      description:
+        "sou graduando em Análise e Desenvolvimento de Sistemas. Atualmente estou no 3º período, a fase onde a teoria da computação se transforma em soluções escaláveis.",
+      tags: [
+        "TypeScript",
+        "Phyton",
+        "Banco de Dados",
+        "Git",
+        "Metodologias Ágeis ",
+        "Modelagem",
+        "React",
+        "TailwindCSS",
+      ],
+      image:
+        "https://www.uninassau.edu.br/sites/mauriciodenassau.edu.br/files/fields/imagemLateral/noticias/2016/11/faculdade_mauricio_de_nassau.png",
+    },
+  ],
 };
 
 const CoursesSection = () => {
@@ -167,8 +190,12 @@ const CoursesSection = () => {
 
   return (
     <section className="courses-section">
-      <p className="section-subtitle">Trajetória Acadêmica</p>
-      <h2 className="section-title">Cursos e Certificações</h2>
+      <p data-aos="zoom-in" className="section-subtitle">
+        Trajetória Acadêmica
+      </p>
+      <h2 data-aos="zoom-in" className="section-title">
+        Cursos e Certificações
+      </h2>
 
       <div className="filter-container">
         <div className="glass-nav">

@@ -13,15 +13,17 @@ export function Home() {
     <>
       <article className="container">
         <div className="content">
-          <h1>
+          <h1 data-aos="fade-up">
             Olá, Sou <span className="txt-gradient">Marcos Ribeiro</span>
           </h1>
-          <h3>Desenvolvedor Fullstack</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
-            tempora commodi? Aut, consequuntur nisi nobis corporis quibusdam,
-            mollitia non dolorum suscipit ad incidunt omnis reiciendis
-            doloribus, ipsam inventore sapiente delectus!
+          <h3 data-aos="fade-right">Desenvolvedor Fullstack</h3>
+          <p data-aos="fade-left">
+            Unindo a experiência em infraestrutura de redes com a Engenharia de
+            Software. Entendo como o dado trafega da camada física até a tela do
+            usuário. Atualmente no 3º período de ADS, foco em criar soluções
+            eficientes, seguras e com mentalidade de dono. Em busca de
+            oportunidades como desenvolvedor para seguirtransformando tecnologia
+            em impacto real de negócio.
           </p>
         </div>
 
