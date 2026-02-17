@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react"; // Removido 'React' não utilizado
 import { FaPhone } from "react-icons/fa";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import AOS from "aos";
@@ -13,14 +13,16 @@ const ContactSection = () => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  const onSubmit = async (event) => {
+  // Adicionada tipagem FormEvent para o parâmetro event
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setIsSubmitting(true);
     setResult("Enviando...");
 
-    const formData = new FormData(event.target);
+    const target = event.currentTarget; // Usamos currentTarget para tipagem correta do form
+    const formData = new FormData(target);
 
-    // Adicione sua Access Key do Web3Forms aqui:
+    // Sua Access Key do Web3Forms
     formData.append("access_key", "1e126385-a3f3-46a9-bdb9-19468f48dd3d");
 
     try {
@@ -33,8 +35,7 @@ const ContactSection = () => {
 
       if (data.success) {
         setResult("Mensagem enviada com sucesso! ✨");
-        event.target.reset();
-        // Limpa a mensagem após 5 segundos
+        target.reset();
         setTimeout(() => setResult(""), 5000);
       } else {
         setResult("Erro ao enviar. Tente novamente.");
@@ -49,7 +50,6 @@ const ContactSection = () => {
 
   return (
     <section className="contact-section">
-      {/* Cabeçalho */}
       <div className="contact-header" data-aos="fade-down">
         <div className="contact-badge">
           <span>
@@ -66,9 +66,7 @@ const ContactSection = () => {
         </p>
       </div>
 
-      {/* Caixa de Contato Principal */}
       <div className="contact-container">
-        {/* Lado Esquerdo - Formulário */}
         <div className="form-column" data-aos="fade-right" data-aos-delay="200">
           <p className="contact-intro-text">
             Obrigado por visitar meu portfólio. Para mais informações ou para
@@ -77,7 +75,6 @@ const ContactSection = () => {
           </p>
 
           <form className="contact-form" onSubmit={onSubmit}>
-            {/* Honeypot para evitar SPAM (invisível para o usuário) */}
             <input
               type="checkbox"
               name="botcheck"
@@ -117,7 +114,6 @@ const ContactSection = () => {
           )}
         </div>
 
-        {/* Lado Direito - Redes Sociais */}
         <div
           className="contact-links"
           data-aos="fade-left"
