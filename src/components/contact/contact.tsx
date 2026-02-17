@@ -1,4 +1,4 @@
-import { useState, useEffect, FormEvent } from "react"; // Removido 'React' não utilizado
+import { useState, useEffect, type FormEvent } from "react";
 import { FaPhone } from "react-icons/fa";
 import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import AOS from "aos";
