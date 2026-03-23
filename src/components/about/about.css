@@ -1,24 +1,24 @@
 .about_container {
-  padding: 60px 10%;
+  padding: 60px 5%;
   min-height: 100vh;
-
   margin: auto;
   background-color: #050505;
+  overflow-x: hidden;
 }
 
 .title {
   color: #a6a4a4;
   display: flex;
-
   justify-content: center;
   margin: 50px auto;
   gap: 10px;
 }
+
 .about_title {
   text-align: center;
   color: white;
-  font-size: 2.5rem;
-  margin-bottom: 90px;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  margin-bottom: 60px;
 }
 
 .about_content {
@@ -31,9 +31,9 @@
   flex: 1;
   font-size: 1.1rem;
   color: #ccc;
+  line-height: 1.6;
 }
 
-/* --- ESTILO DOS CARDS (VIDRO) --- */
 .cards_stack {
   flex: 0.8;
   display: flex;
@@ -51,7 +51,7 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card_glass:hover {
@@ -60,49 +60,94 @@
 }
 
 .card_icon {
-  width: 130px;
+  width: 50px;
+  min-width: 50px;
   height: 50px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .icon_blue {
   color: #00bfff;
   border: 1px solid #00bfff;
 }
+
 .icon_purple {
   color: #a020f0;
   border: 1px solid #a020f0;
 }
+
 .icon_green {
   color: #32cd32;
   border: 1px solid #32cd32;
 }
 
 .card_info {
-  background: rgba(255, 255, 255, 0);
+  background: transparent;
 }
+
 .card_info h3 {
   margin: 0;
   font-size: 1.2rem;
   color: #fff;
-  background: rgba(255, 255, 255, 0);
 }
 
 .card_info p {
   margin: 5px 0 0;
   font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0);
   color: #888;
 }
 
-/* Responsividade */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .about_content {
+    gap: 30px;
+  }
+  .cards_stack {
+    flex: 1;
+  }
+}
+
+@media (max-width: 850px) {
+  .about_container {
+    padding: 40px 20px;
+  }
+
   .about_content {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .about_title {
+    margin-bottom: 40px;
+  }
+
+  .txt_about {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cards_stack {
+    width: 100%;
+  }
+
+  .card_glass:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card_glass {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .card_icon {
+    width: 60px;
+    height: 60px;
   }
 }

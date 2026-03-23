@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import "./projects.css";
 
 // --- TIPAGEM ---
-
 interface Project {
   id: string;
   title: string;
@@ -19,8 +18,7 @@ interface ProjectDatabase {
   Mobile: Project[];
 }
 
-// --- DADOS ---
-
+// --- DADOS (Mantidos conforme solicitado) ---
 const projectDatabase: ProjectDatabase = {
   "Front-end": [
     {
@@ -99,18 +97,8 @@ const projectDatabase: ProjectDatabase = {
       id: "lp1",
       title: "Personal Blog API",
       description:
-        "Este é o projeto de uma API robusta para um Blog Pessoal, desenvolvida com o framework NestJS. A aplicação conta com um sistema completo de CRUD para postagens e temas, além de um sistema de autenticação via JWT",
-      tags: [
-        "Typescript",
-        "NestJS",
-        "TypeORM",
-        "MySQL",
-        "JWT",
-        "PassportJS",
-        "Bcrypt",
-        "Swagger",
-        "Class validator",
-      ],
+        "API robusta para um Blog Pessoal, desenvolvida com o framework NestJS. Sistema completo de CRUD e autenticação JWT.",
+      tags: ["Typescript", "NestJS", "TypeORM", "MySQL", "JWT", "Swagger"],
       image: "/img/backend/blogpessoal.png",
       linkRepo: "https://github.com/Marcsfic98/personal_blog",
       linkDemo: "https://personal-blog-zkpf.onrender.com/",
@@ -119,18 +107,8 @@ const projectDatabase: ProjectDatabase = {
       id: "lp2",
       title: "MeLeva API",
       description:
-        "Este é o projeto de uma API robusta para um App de Carona compartilhada, desenvolvida com o framework NestJS.",
-      tags: [
-        "Typescript",
-        "NestJS",
-        "TypeORM",
-        "MySQL",
-        "JWT",
-        "PassportJS",
-        "Bcrypt",
-        "Swagger",
-        "Class validator",
-      ],
+        "API robusta para um App de Carona compartilhada, desenvolvida com o framework NestJS.",
+      tags: ["Typescript", "NestJS", "TypeORM", "MySQL", "JWT", "Swagger"],
       image:
         "https://raw.githubusercontent.com/Grupo-02-Turma-JavaScript-12/Aplicativo-de-Carona-Compartilhada-BackEnd/refs/heads/main/src/assets/logo_meleva.png",
       linkRepo:
@@ -142,18 +120,8 @@ const projectDatabase: ProjectDatabase = {
       id: "lp3",
       title: "NutriGo API",
       description:
-        "Este é o projeto de uma API robusta para um Aplicativo de Delivery fit, desenvolvida com o framework NestJS.",
-      tags: [
-        "Typescript",
-        "NestJS",
-        "TypeORM",
-        "MySQL",
-        "JWT",
-        "PassportJS",
-        "Bcrypt",
-        "Swagger",
-        "Class validator",
-      ],
+        "API robusta para um Aplicativo de Delivery fit, desenvolvida com o framework NestJS.",
+      tags: ["Typescript", "NestJS", "TypeORM", "MySQL", "JWT", "Swagger"],
       image:
         "https://raw.githubusercontent.com/Grupo-02-Turma-JavaScript-12/Aplicativo-de-Delivery-BackEnd/refs/heads/main/src/assets/nutrigo%20.png",
       linkRepo: "https://github.com/Marcsfic98/Aplicativo-de-Delivery-BackEnd",
@@ -163,7 +131,7 @@ const projectDatabase: ProjectDatabase = {
       id: "lp4",
       title: "Crud Farmacia",
       description:
-        "Este é o projeto de uma API robusta para um Sistema de Farmacia, desenvolvida com o framework NestJS.",
+        "API robusta para um Sistema de Farmacia, desenvolvida com o framework NestJS.",
       tags: ["Typescript", "NestJS", "TypeORM", "MySQL", "Class validator"],
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFhqJBIBZ-TOdCaGCY9GF_PXT22jtetg-uJQ&s",
@@ -174,7 +142,7 @@ const projectDatabase: ProjectDatabase = {
       id: "lp5",
       title: "savepoint API",
       description:
-        "Este é o projeto de uma API robusta para uma Loja de Games, desenvolvida com o framework NestJS.",
+        "API robusta para uma Loja de Games, desenvolvida com o framework NestJS.",
       tags: ["Typescript", "NestJS", "TypeORM", "MySQL"],
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCgD-g7k7eEWKlKYX1RQlH5O7roNDGmD4MbQ&s",
@@ -206,8 +174,6 @@ const projectDatabase: ProjectDatabase = {
   ],
 };
 
-// --- COMPONENTE ---
-
 const ProjectsSection = () => {
   const [activeTab, setActiveTab] =
     useState<keyof ProjectDatabase>("Front-end");
@@ -227,18 +193,14 @@ const ProjectsSection = () => {
   const handleTabChange = (tab: string) => {
     setActiveTab(tab as keyof ProjectDatabase);
     if (carouselRef.current) {
-      carouselRef.current.scrollTo({ left: 0, behavior: "auto" }); // "instant" foi renomeado para "auto" em versões recentes ou mantido como string
+      carouselRef.current.scrollTo({ left: 0, behavior: "auto" });
     }
   };
 
   return (
     <section className="projects-section" id="projects-section">
-      <p data-aos="zoom-in" className="section-subtitle">
-        Meu Trabalho
-      </p>
-      <h2 data-aos="zoom-in" className="section-title">
-        Projetos
-      </h2>
+      <p className="section-subtitle">Meu Trabalho</p>
+      <h2 className="section-title">Projetos</h2>
 
       <div className="filter-container">
         <div className="glass-nav">

@@ -59,7 +59,7 @@ export function Home() {
         <div className="menu_container">
           <a
             className="btn_cv"
-            href="/cv/marcos_ribeiro_dev.pdf" // Caminho baseado na sua estrutura de pastas
+            href="/cv/marcos_ribeiro_dev.pdf"
             download="marcos_ribeiro_dev.pdf"
           >
             <FaDownload style={{ marginRight: "8px" }} /> Baixar CV

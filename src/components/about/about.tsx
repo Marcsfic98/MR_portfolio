@@ -14,7 +14,6 @@ export function About() {
       </h1>
 
       <div data-aos="fade-right" className="about_content">
-        {/* LADO ESQUERDO: TEXTO COM NOTAÇÕES */}
         <section className="txt_about">
           <RoughNotationGroup show={true}>
             <p>
@@ -63,7 +62,6 @@ export function About() {
           </RoughNotationGroup>
         </section>
 
-        {/* LADO DIREITO: CARDS COM EFEITO VIDRO */}
         <aside data-aos="fade-left" className="cards_stack">
           <div className="card_glass">
             <div className="card_icon icon_blue">{"</>"}</div>

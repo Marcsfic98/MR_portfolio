@@ -167,7 +167,17 @@
 /* Ajuste de responsividade básico */
 @media (max-width: 480px) {
   .menu_container {
-    flex-direction: column; /* Botões empilhados no celular */
+    flex-direction: column;
     align-items: center;
+  }
+
+  .buttons_container {
+    flex-wrap: wrap;
+  }
+
+  .buttons_container .btn {
+    width: 30%;
+    display: flex;
+    justify-content: center;
   }
 }
