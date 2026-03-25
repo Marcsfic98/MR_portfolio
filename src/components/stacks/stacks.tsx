@@ -36,11 +36,6 @@ const glowPulse = keyframes`
   100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
 `;
 
-const scroll = keyframes`
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-`;
-
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -72,6 +67,7 @@ const NodeStyled = styled.div<{ $bgColor?: string; $glow?: string }>`
   }
 `;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const SkillNode = ({ data }: any) => (
   <NodeStyled $bgColor={data.bgColor} $glow={data.glow}>
     <Handle type="target" position={Position.Top} />
