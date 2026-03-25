@@ -358,15 +358,15 @@ const ProjectsSection = () => {
 
                 <div className="project-details-grid">
                   <div className="detail-item">
-                    <strong>⚠️ Problema:</strong>
+                    <strong>Problema:</strong>
                     <span>{project.problem}</span>
                   </div>
                   <div className="detail-item">
-                    <strong>✅ Solução:</strong>
+                    <strong>Solução:</strong>
                     <span>{project.solution}</span>
                   </div>
                   <div className="detail-item highlight">
-                    <strong>🚀 Destaque Técnico:</strong>
+                    <strong>Destaque Técnico:</strong>
                     <span>{project.technicalHighlight}</span>
                   </div>
                 </div>
