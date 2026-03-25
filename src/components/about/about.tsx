@@ -1,4 +1,5 @@
-import { FaRegUser } from "react-icons/fa";
+import { FaCode, FaRegUser, FaRocket } from "react-icons/fa"; // Adicionei novos ícones
+import { FaSquareDribbble } from "react-icons/fa6";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import "../../index.css";
 import "./about.css";
@@ -10,87 +11,100 @@ export function About() {
         <FaRegUser /> Sobre mim
       </h4>
       <h1 data-aos="zoom-in" className="about_title">
-        Prazer em <span className="txt-gradient">conhecê-lo!</span>
+        Engenharia, <span className="txt-gradient">Liderança</span> e Produto.
       </h1>
 
       <div data-aos="fade-right" className="about_content">
         <section className="txt_about">
           <RoughNotationGroup show={true}>
             <p>
-              Minha trajetória na tecnologia começou onde poucos desenvolvedores
-              costumam transitar: no
-              <RoughNotation type="box" color="#ff69b4">
-                {' "chão de fábrica" '}
+              Minha base técnica nasceu na infraestrutura de redes, o que me
+              moldou com uma
+              <RoughNotation type="box" color="#ff69b4" strokeWidth={2}>
+                {" mentalidade analítica e resiliente "}
               </RoughNotation>
-              , atuando como{" "}
-              <RoughNotation type="underline" color="#ff8c00" strokeWidth={2}>
-                Técnico de Redes
-              </RoughNotation>
+              . Não apenas escrevo código; eu entendo como o dado trafega e a
+              arquitetura por trás dele. Essa transição para o desenvolvimento
+              me permitiu unir a precisão da infraestrutura com a{" "}
+              <strong>
+                agilidade do ecossistema Full Stack (React, Node.js e
+                TypeScript)
+              </strong>
               .
               <br />
               <br />
-              Essa vivência prática me proporcionou uma compreensão profunda da
-              base de qualquer aplicação, permitindo que hoje, como Engenheiro
-              de Software, eu projete
+              Atualmente cursando{" "}
+              <strong>Análise e Desenvolvimento de Sistemas</strong>,
+              destaquei-me como
+              <RoughNotation type="underline" color="#ff8c00" strokeWidth={2}>
+                {" Líder Técnico no projeto Serviços Já "}
+              </RoughNotation>
+              , onde exercitei a <strong>comunicação assertiva</strong>, guiando
+              o time desde a concepção até a pré-incubação no Senac I.de.i.as.
+              <br />
+              <br />
+              Acredito que tecnologia é sobre pessoas. Minha experiência em
+              squads de alta performance consolidou minha capacidade de
               <RoughNotation
                 type="bracket"
                 brackets={["left", "right"]}
                 color="#8a2be2"
                 strokeWidth={3}
               >
-                {" sistemas resilientes e escaláveis "}
+                {" colaboração extrema e entregas orientadas a valor "}
               </RoughNotation>
               .
               <br />
               <br />
-            </p>
-
-            <p>
-              Atualmente, sou o <strong>Desenvolvedor Responsável</strong> pelo
-              <RoughNotation type="circle" color="#32cd32" padding={8}>
-                {" Serviços Já "}
-              </RoughNotation>
-              , um projeto estratégico em fase de pré-incubação na{" "}
-              <strong>Incubadora I.de.i.as (Senac)</strong>. Neste desafio, atuo
-              na intersecção entre a Engenharia e o Produto, liderando desde a
-              modelagem do banco de dados até a entrega de
-              <RoughNotation type="underline" color="#ff69b4">
-                {" interfaces de alta performance "}
-              </RoughNotation>
-              .
+              {/* Seção focada em recrutadores e busca ativa */}
+              <span className="hiring_call">
+                <FaRocket color="#00d4ff" />{" "}
+                <strong>Estou em busca de novos desafios</strong> onde eu possa
+                aplicar meu foco em <strong>Clean Code</strong>, testes
+                automatizados e escalabilidade para impulsionar resultados
+                reais.
+              </span>
             </p>
           </RoughNotationGroup>
         </section>
 
         <aside data-aos="fade-left" className="cards_stack">
+          {/* Card de Tech Stack - Essencial para SEO de recrutadores */}
           <div className="card_glass">
-            <div className="card_icon icon_blue">{"</>"}</div>
+            <div className="card_icon icon_yellow">
+              <FaCode color="#fff" size={26} />
+            </div>
             <div className="card_info">
-              <h3>Front-End</h3>
+              <h3>Tech Stack</h3>
               <p>
-                Interfaces modernas e responsivas com foco na experiência do
-                usuário
+                Domínio em{" "}
+                <strong>React, Next.js, Node.js e React Native</strong>. Foco em
+                código testável, performático e componentização.
               </p>
             </div>
           </div>
 
           <div className="card_glass">
-            <div className="card_icon icon_purple">{"db"}</div>
+            <div className="card_icon icon_blue">
+              <FaSquareDribbble size={26} />
+            </div>
             <div className="card_info">
-              <h3>Back-End</h3>
+              <h3>Soft Skills</h3>
               <p>
-                Sistemas seguros e escaláveis, com arquiteturas bem estruturadas
+                Liderança técnica, metodologias ágeis (Scrum) e facilidade em
+                traduzir requisitos de negócio em soluções técnicas.
               </p>
             </div>
           </div>
 
           <div className="card_glass">
-            <div className="card_icon icon_green">{"☆"}</div>
+            <div className="card_icon icon_green">{"🌱"}</div>
             <div className="card_info">
-              <h3>Qualidade</h3>
+              <h3>Evolução Contínua</h3>
               <p>
-                Código limpo, versionamento com Git e práticas ágeis de
-                desenvolvimento
+                Transição sólida da infra para software. Estudante ativo e
+                desenvolvedor focado em aprender e aplicar novas tecnologias
+                rapidamente.
               </p>
             </div>
           </div>

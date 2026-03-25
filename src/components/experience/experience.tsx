@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Courses.css";
 
 interface Course {
@@ -27,7 +27,7 @@ const courseDatabase: CourseDatabase = {
       duration: "480h",
       date: "2026",
       description:
-        "Formação intensiva focada em empregabilidade e soft skills.",
+        "O bootcamp de Fullstack JavaScript da Generation Brasil é um programa intensivo e imersivo, focado tanto em Hard Skills quanto em Soft Skills.",
       tags: [
         "TypeScript",
         "Nest",
@@ -48,10 +48,10 @@ const courseDatabase: CourseDatabase = {
       institution: "Atlântico Avanti",
       duration: "80h",
       date: "2026",
-      description: "Programa de aceleração em tecnologias modernas.",
+      description:
+        "O bootcamp de Fullstack JavaScript da Escola Atlântico Avanti é um programa de aceleração técnica voltado para tecnologias modernas e práticas reais de mercado.",
       tags: ["Javascript", "Node.js", "Prisma", "React", "JWT", "Mysql", "Git"],
-      image:
-        "https://media.licdn.com/dms/image/v2/C4D0BAQHO-SV6oavkRA/company-logo_200_200/company-logo_200_200/0/1668087442234?e=2147483647&v=beta&t=3-wVh5X6_8OdjdNqD0SN8tq0Z--x9nyg8u0L6KziecM",
+      image: "/img/cursos/c8.png",
     },
     {
       id: "b3",
@@ -59,7 +59,8 @@ const courseDatabase: CourseDatabase = {
       institution: "Senac & Serasa",
       duration: "240h",
       date: "2025",
-      description: "Curso técnico em lógica e backend com Python.",
+      description:
+        "Iniciativa de impacto social da Serasa Experian em parceria com o Senac, focado em democratizar o acesso à carreira em tecnologia.",
       tags: ["Javascript", "Python", "Django", "Html", "Css"],
       image:
         "https://www.serasaexperian.com.br/adobe/dynamicmedia/deliver/dm-aid--48f56584-e1d2-4567-b385-016cb7d5f613/banner-tse-6-edicao-2.png?preferwebp=true&quality=85",
@@ -70,136 +71,120 @@ const courseDatabase: CourseDatabase = {
       institution: "Dio & MeuTudo",
       duration: "75h",
       date: "2025",
-      description: "Especialização em React Native.",
-      tags: ["Javascript", "Node", "React Native", "Git"],
-      image:
-        "https://www.mobills.com.br/blog/wp-content/uploads/2023/12/Como-cancelar-a-conta-meutudo.jpg",
+      description:
+        "Programa de especialização intensiva focado no ecossistema mobile, unindo o rigor técnico da fintech meutudo com a metodologia prática da DIO.",
+      tags: ["Javascript", "Node", "React Native", "expo", "Git"],
+      image: "/img/cursos/c9.png",
     },
   ],
   Certificações: [
     {
-      id: "c1",
-
-      title: "Frontend Completo",
-
-      institution: "Dankicode",
-
-      duration: "83h",
-
+      id: "c8",
+      title: "Fullstack Javascript",
+      institution: "Atlântico Avanti",
+      duration: "80h",
       date: "2025",
-
+      description:
+        "Aceleração técnica voltada para formação de alto nível em squads de desenvolvimento ágil.",
+      tags: ["Javascript", "Node.js", "Prisma", "React", "JWT", "Mysql", "Git"],
+      image: "/img/cursos/c8.png",
+    },
+    {
+      id: "c1",
+      title: "Frontend Completo",
+      institution: "Dankicode",
+      duration: "83h",
+      date: "2025",
+      description:
+        "Treinamento prático indo do absoluto zero até níveis profissionais de interface web.",
       tags: [
         "Javascript",
-
         "React",
-
+        "jquery",
+        "Bootstrap",
         "TailwindCss",
-
-        "Styled Components",
-
-        "MUI",
-
+        "UI & UX",
+        "Git",
         "CSS",
-
         "HTML",
       ],
-
       image: "/img/cursos/c1.png",
     },
-
     {
       id: "c2",
-
       title: "Git e Github",
-
       institution: "Dankicode",
-
       duration: "2h",
-
       date: "2025",
-
+      description:
+        "Focado em fluxo de trabalho profissional e controle de versionamento avançado.",
       tags: ["Git", "GitHub", "Git Labs"],
-
       image: "/img/cursos/c2.png",
     },
-
     {
       id: "c3",
-
       title: "Javascript Completo",
-
       institution: "Dankicode",
-
       duration: "14h",
-
       date: "2024",
-
+      description:
+        "Domínio da linguagem pura para tornar o desenvolvedor independente de frameworks.",
       tags: ["Javascript", "Jquery", "Node", "React"],
-
       image: "/img/cursos/c3.png",
     },
-
     {
       id: "c4",
-
       title: "React JS",
-
       institution: "Dankicode",
-
       duration: "4h",
-
       date: "2024",
-
+      description:
+        "Criação de interfaces modernas e escaláveis com foco em componentes reais.",
       tags: ["React", "Javascript", "MUI"],
-
       image: "/img/cursos/c4.png",
     },
-
     {
       id: "c5",
-
       title: "Formação Javascript Developer",
-
       institution: "Dio",
-
       duration: "39h",
-
       date: "2025",
-
-      tags: ["Javascript", "Jquery", "Node", "React", "CSS"],
-
+      description:
+        "Roteiro completo com desafios de código para domínio total do JavaScript.",
+      tags: ["Javascript", "Node", "React", "CSS"],
       image: "/img/cursos/c5.png",
     },
-
     {
       id: "c6",
-
       title: "Formação React Developer",
-
       institution: "Dio",
-
       duration: "34h",
-
       date: "2025",
-
+      description:
+        "Trilha de aprendizado simulando o dia a dia de uma empresa de tecnologia.",
       tags: ["React", "Javascript", "MUI"],
-
       image: "/img/cursos/c6.png",
     },
-
+    {
+      id: "c9",
+      title: "Mobile Developer",
+      institution: "Dio & Meutudo",
+      duration: "75h",
+      date: "2025",
+      description:
+        "Especialização em aplicativos nativos focando em performance, gestos e hardware.",
+      tags: ["React Native", "Node", "CSS"],
+      image: "/img/cursos/c9.png",
+    },
     {
       id: "c7",
-
       title: "React Native Developer",
-
       institution: "Dio",
-
       duration: "46h",
-
       date: "2025",
-
+      description:
+        "Especialização em aplicativos nativos focando em performance, gestos e hardware.",
       tags: ["React Native", "Node", "CSS"],
-
       image: "/img/cursos/c7.png",
     },
   ],
@@ -210,8 +195,16 @@ const courseDatabase: CourseDatabase = {
       institution: "Mauricio de Nassau",
       duration: "2.5 anos",
       date: "2025",
-      description: "Graduando no 3º período.",
-      tags: ["TypeScript", "Python", "SQL", "Git", "Agile", "React"],
+      description:
+        "Graduando no 3º período. Foco em Engenharia de Software e Metodologias Ágeis.",
+      tags: [
+        "TypeScript",
+        "Python",
+        "SQL",
+        "Engenharia de Software",
+        "POO",
+        "Estrutura de Dados",
+      ],
       image:
         "https://www.uninassau.edu.br/sites/mauriciodenassau.edu.br/files/fields/imagemLateral/noticias/2016/11/faculdade_mauricio_de_nassau.png",
     },
@@ -220,7 +213,13 @@ const courseDatabase: CourseDatabase = {
 
 const CoursesSection = () => {
   const [activeTab, setActiveTab] = useState<keyof CourseDatabase>("Bootcamps");
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Bloquear scroll do fundo quando modal abrir
+  useEffect(() => {
+    document.body.style.overflow = selectedCert ? "hidden" : "unset";
+  }, [selectedCert]);
 
   const scroll = (direction: "left" | "right") => {
     if (carouselRef.current) {
@@ -235,9 +234,8 @@ const CoursesSection = () => {
 
   const handleTabChange = (tab: string) => {
     setActiveTab(tab as keyof CourseDatabase);
-    if (carouselRef.current) {
+    if (carouselRef.current)
       carouselRef.current.scrollTo({ left: 0, behavior: "auto" });
-    }
   };
 
   return (
@@ -268,14 +266,22 @@ const CoursesSection = () => {
         <div className="courses-carousel" ref={carouselRef}>
           {courseDatabase[activeTab].map((course) => (
             <div className="course-card" key={course.id}>
-              <div className="image-wrapper">
+              {/* CLIQUE NA IMAGEM ABRE O MODAL */}
+              <div
+                className="image-wrapper"
+                onClick={() => setSelectedCert(course.image)}
+              >
                 <img
                   src={course.image}
                   alt={course.title}
                   className="course-image"
                 />
+                <div className="cert-overlay">
+                  <span>Ampliar Certificado</span>
+                </div>
                 <span className="course-date">{course.date}</span>
               </div>
+
               <div className="course-content">
                 <div className="course-header">
                   <span className="institution-tag">{course.institution}</span>
@@ -285,6 +291,7 @@ const CoursesSection = () => {
                 {course.description && (
                   <p className="course-desc">{course.description}</p>
                 )}
+
                 <div className="tags-box">
                   {course.tags.map((tag) => (
                     <span key={tag} className="tag-item">
@@ -292,8 +299,15 @@ const CoursesSection = () => {
                     </span>
                   ))}
                 </div>
+
                 <div className="card-buttons">
-                  <button className="btn-certificate">Ver Certificado</button>
+                  {/* BOTÃO TAMBÉM ABRE O MODAL */}
+                  <button
+                    className="btn-certificate"
+                    onClick={() => setSelectedCert(course.image)}
+                  >
+                    Ver Certificado
+                  </button>
                 </div>
               </div>
             </div>
@@ -303,6 +317,31 @@ const CoursesSection = () => {
           ❯
         </button>
       </div>
+
+      {/* MODAL SYSTEM */}
+      {selectedCert && (
+        <div
+          className="cert-modal-overlay"
+          onClick={() => setSelectedCert(null)}
+        >
+          <div
+            className="cert-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="cert-close-btn"
+              onClick={() => setSelectedCert(null)}
+            >
+              &times;
+            </button>
+            <img
+              src={selectedCert}
+              alt="Certificado"
+              className="cert-modal-img"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

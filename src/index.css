@@ -6,6 +6,9 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+#root {
+  background-color: #050505;
+}
 
 :root {
   --bg-color: #383b42;

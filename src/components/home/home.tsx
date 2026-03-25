@@ -18,12 +18,20 @@ export function Home() {
           </h1>
           <h3 data-aos="fade-right">Desenvolvedor Fullstack</h3>
           <p data-aos="fade-left">
-            Unindo a experiência em infraestrutura de redes com a Engenharia de
-            Software. Entendo como o dado trafega da camada física até a tela do
-            usuário. Atualmente no 3º período de ADS, foco em criar soluções
-            eficientes, seguras e com mentalidade de dono. Em busca de
-            oportunidades como desenvolvedor para seguirtransformando tecnologia
-            em impacto real de negócio.
+            Desenvolvedor com uma base sólida construída na infraestrutura de
+            redes e telecomunicações.
+            <br />
+            <br /> Essa bagagem me permite desenvolver aplicações com uma visão
+            sistêmica, entendendo desde a performance do tráfego de dados até a
+            entrega de interfaces responsivas e de alto impacto visual.
+            <br />
+            <br />
+            Atualmente, curso Análise e Desenvolvimento de Sistemas (3º período)
+            e lidero tecnicamente o projeto Serviços Já, selecionado para
+            pré-incubação no Senac I.de.i.as. <br />
+            <br />
+            Sou apaixonado por transformar lógica complexa em experiências
+            fluidas utilizando o ecossistema React, Next.js e TypeScript.
           </p>
         </div>
 
