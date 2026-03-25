@@ -79,12 +79,128 @@ const courseDatabase: CourseDatabase = {
   Certificações: [
     {
       id: "c1",
+
       title: "Frontend Completo",
+
       institution: "Dankicode",
+
       duration: "83h",
+
       date: "2025",
-      tags: ["Javascript", "React", "CSS", "HTML"],
+
+      tags: [
+        "Javascript",
+
+        "React",
+
+        "TailwindCss",
+
+        "Styled Components",
+
+        "MUI",
+
+        "CSS",
+
+        "HTML",
+      ],
+
       image: "/img/cursos/c1.png",
+    },
+
+    {
+      id: "c2",
+
+      title: "Git e Github",
+
+      institution: "Dankicode",
+
+      duration: "2h",
+
+      date: "2025",
+
+      tags: ["Git", "GitHub", "Git Labs"],
+
+      image: "/img/cursos/c2.png",
+    },
+
+    {
+      id: "c3",
+
+      title: "Javascript Completo",
+
+      institution: "Dankicode",
+
+      duration: "14h",
+
+      date: "2024",
+
+      tags: ["Javascript", "Jquery", "Node", "React"],
+
+      image: "/img/cursos/c3.png",
+    },
+
+    {
+      id: "c4",
+
+      title: "React JS",
+
+      institution: "Dankicode",
+
+      duration: "4h",
+
+      date: "2024",
+
+      tags: ["React", "Javascript", "MUI"],
+
+      image: "/img/cursos/c4.png",
+    },
+
+    {
+      id: "c5",
+
+      title: "Formação Javascript Developer",
+
+      institution: "Dio",
+
+      duration: "39h",
+
+      date: "2025",
+
+      tags: ["Javascript", "Jquery", "Node", "React", "CSS"],
+
+      image: "/img/cursos/c5.png",
+    },
+
+    {
+      id: "c6",
+
+      title: "Formação React Developer",
+
+      institution: "Dio",
+
+      duration: "34h",
+
+      date: "2025",
+
+      tags: ["React", "Javascript", "MUI"],
+
+      image: "/img/cursos/c6.png",
+    },
+
+    {
+      id: "c7",
+
+      title: "React Native Developer",
+
+      institution: "Dio",
+
+      duration: "46h",
+
+      date: "2025",
+
+      tags: ["React Native", "Node", "CSS"],
+
+      image: "/img/cursos/c7.png",
     },
   ],
   Faculdade: [

@@ -1,16 +1,20 @@
 .container {
   padding: 4rem;
-  background-color: #050505;
+  background-color: #040504;
+  background-image: url("../../../public/img/bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
   min-height: 100vh;
 }
 
 .content {
-  max-width: 60vw;
+  max-width: 40vw;
   display: flex;
   flex-direction: column;
   margin: auto;
   gap: 30px;
   align-items: center;
+
   justify-content: center;
 }
 
@@ -166,6 +170,12 @@
 
 /* Ajuste de responsividade básico */
 @media (max-width: 480px) {
+  .container {
+    background-position: center;
+  }
+  .content {
+    max-width: 80vw;
+  }
   .menu_container {
     flex-direction: column;
     align-items: center;

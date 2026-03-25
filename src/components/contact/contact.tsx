@@ -37,6 +37,7 @@ const ContactSection = () => {
       } else {
         setResult("Erro ao enviar. Tente novamente.");
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setResult("Erro de conexão. Verifique sua internet.");
     } finally {

@@ -43,6 +43,26 @@ const projectDatabase: ProjectDatabase = {
     },
     {
       id: "f2",
+      title: "Nutrigo",
+      description:
+        "O Nutrigo é o terceiro Projeto Integrador da formação JavaScript Fullstack da Generation Brasil. A aplicação consiste em uma plataforma completa de delivery, onde usuários podem realizar pedidos e estabelecimentos podem gerenciar seus produtos e vendas.",
+      tags: ["Typescript", "React", "Tailwind", "Toastify ", "Swiper", "Axios"],
+      image: "/img/frontend/nutrigo.gif",
+      linkRepo: "https://github.com/Marcsfic98/NutriGo-Delivery-Frontend",
+      linkDemo: "https://nutrigodelivery.vercel.app/",
+    },
+    {
+      id: "f4",
+      title: "MoveUp",
+      description:
+        "O MoveUp é o primeiro Projeto Integrador da formação JavaScript Fullstack da Generation Brasil. A aplicação consiste em uma landign page , onde mostra um pouco sobre nosso app fitnnes e sobre nossa equipe de devs.",
+      tags: ["Typescript", "React", "Tailwind", "Toastify ", "Swiper", "Axios"],
+      image: "/img/frontend/moveup.gif",
+      linkRepo: "https://github.com/Marcsfic98/MoveUp_Frontend",
+      linkDemo: "https://moveup-beta.vercel.app/",
+    },
+    {
+      id: "f5",
       title: "SportShopping",
       description:
         "E-commerce esportivo 100% funcional com controle de estoque, validação de cartão e consumo de API para gerenciamento de mercadorias.",
@@ -52,7 +72,7 @@ const projectDatabase: ProjectDatabase = {
       linkDemo: "https://sportshopping-f2858.web.app",
     },
     {
-      id: "f3",
+      id: "f6",
       title: "GitFind",
       description:
         "Aplicação que consome a API do GitHub para buscar perfis de usuários e listar seus repositórios em tempo real.",
@@ -62,7 +82,7 @@ const projectDatabase: ProjectDatabase = {
       linkDemo: "https://gitfind-seven.vercel.app/",
     },
     {
-      id: "f4",
+      id: "f7",
       title: "Painel Monki",
       description:
         "Dashboard administrativo responsivo para gestão de solicitações de clientes e configurações de sistema.",
@@ -72,7 +92,7 @@ const projectDatabase: ProjectDatabase = {
       linkDemo: "https://marcsfic98.github.io/Dashboard/",
     },
     {
-      id: "f5",
+      id: "f8",
       title: "RM Cars",
       description:
         "Site de vendas de automóveis com sistema de filtros de valores, galeria de fotos e formulário de conversão.",
@@ -82,7 +102,7 @@ const projectDatabase: ProjectDatabase = {
       linkDemo: " https://marcsfic98.github.io/Rmcars/",
     },
     {
-      id: "f6",
+      id: "f9",
       title: "Consultório Monguilhott",
       description:
         "Landing page profissional para consultório odontológico com foco em conversão e total responsividade.",
@@ -122,8 +142,7 @@ const projectDatabase: ProjectDatabase = {
       description:
         "API robusta para um Aplicativo de Delivery fit, desenvolvida com o framework NestJS.",
       tags: ["Typescript", "NestJS", "TypeORM", "MySQL", "JWT", "Swagger"],
-      image:
-        "https://raw.githubusercontent.com/Grupo-02-Turma-JavaScript-12/Aplicativo-de-Delivery-BackEnd/refs/heads/main/src/assets/nutrigo%20.png",
+      image: "/img/backend/nutrigo.png",
       linkRepo: "https://github.com/Marcsfic98/Aplicativo-de-Delivery-BackEnd",
       linkDemo: "https://github.com/Marcsfic98/Aplicativo-de-Delivery-BackEnd",
     },
