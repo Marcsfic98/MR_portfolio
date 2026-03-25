@@ -306,8 +306,8 @@ const ProjectsSection = () => {
 
   return (
     <section className="projects-section" id="projects-section">
-      <p className="section-subtitle">Desenvolvimento & Liderança</p>
-      <h2 className="section-title">Portfólio Full Stack</h2>
+      <p className="section-subtitle">Projetos</p>
+      <h2 className="section-title">Portfólio</h2>
 
       <div className="filter-container">
         <div className="glass-nav">

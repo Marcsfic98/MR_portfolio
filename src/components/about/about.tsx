@@ -11,7 +11,7 @@ export function About() {
         <FaRegUser /> Sobre mim
       </h4>
       <h1 data-aos="zoom-in" className="about_title">
-        Engenharia, <span className="txt-gradient">Liderança</span> e Produto.
+        Historia, <span className="txt-gradient">Realizações</span> e Metas.
       </h1>
 
       <div data-aos="fade-right" className="about_content">
